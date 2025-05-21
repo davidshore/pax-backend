@@ -78,18 +78,18 @@ app.use(errorHandler);
 
 //only in dev mode
 if (process.env.NODE_ENV !== "production") {
-  const port = process.env.PORT || 13000;
-
-  app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
-    // console.log(`Swagger docs: http://localhost:${port}/api-docs`);
-  });
-
   console.log("DB_USER:", process.env.DB_USER);
   console.log("DB_HOST:", process.env.DB_HOST);
   console.log("DB_NAME:", process.env.DB_NAME);
   console.log("DB_PASSWORD:", process.env.DB_PASSWORD);
   console.log("DB_PORT:", process.env.DB_PORT);
 }
+
+const port = 3000;
+
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+  // console.log(`Swagger docs: http://localhost:${port}/api-docs`);
+});
 
 export default app; // Export for testing
