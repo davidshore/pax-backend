@@ -1,11 +1,11 @@
 import express from "express";
 import dotenv from "dotenv";
-import pool from "./db";
-import swaggerUi from "swagger-ui-express";
+// import pool from "./db";
+// import swaggerUi from "swagger-ui-express";
 // import swaggerSpec from "./swagger/swagger";
 import cors from "cors";
-import limiter from "./middlewares/rateLimiter";
-import { Request, Response } from "express";
+// import limiter from "./middlewares/rateLimiter";
+// import { Request, Response } from "express";
 import errorHandler from "./middlewares/errorHandler";
 
 console.log("Index.ts is running");
@@ -16,7 +16,7 @@ const app = express();
 
 app.use(express.json()); // for parsing application/json
 
-app.use(limiter); // allows limiter on all routes
+// app.use(limiter); // allows limiter on all routes
 // allow requests from frontend (localhost:5173)
 app.use(cors());
 
